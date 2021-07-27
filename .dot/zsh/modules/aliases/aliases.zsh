@@ -27,6 +27,3 @@ alias history-statc="fc -l 1 | awk '{ CMD[$2]++; count++; } END { for (a in CMD)
 alias dot='git --git-dir=$XDG_CONFIG_HOME/.dotgit/ --work-tree=$HOME'
 alias treedot='tree -ahC -L 4 --dirsfirst -I .dotgit'
 alias treedotclean='treedot -I completions\|.dotgit\|zinit'
-
-# Source other specific aliases files
-for file in ${0:a:h}/sub_*.zsh; source $file

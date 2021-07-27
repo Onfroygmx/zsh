@@ -19,11 +19,7 @@ RPROMPT='%(?.%F{green}.%F{red}[%?] - )%B%D{%H:%M:%S}%b%f'
 
 ## Source Modules and plugins
 # Load personal Modules
-source $MODULE_DIR/aliases/aliases.zsh
-source $MODULE_DIR/colored-man/colored-man.zsh
-source $MODULE_DIR/history/history.zsh
-source $MODULE_DIR/dircolor/dircolor.zsh
-source $MODULE_DIR/completion/completion.zsh
+for file in $MODULE_DIR/**/*.zsh; source $file
 
 # Load external Plugins
 source $PLUGIN_DIR/autosuggestions/zsh-autosuggestions.zsh

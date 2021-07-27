@@ -31,7 +31,7 @@ printf "\n$fg[green]Symlink zshenv file$reset_color\n"
 
 printf "\n$fg[green]Create other folders$reset_color\n"
 # Create plugins dir
-PLUGINS_DIR="$XDG_CONFIG_HOME/Plugins"
+PLUGINS_DIR="$XDG_CONFIG_HOME/plugins"
 [[ ! -d "$PLUGINS_DIR" ]] && mkdir -p $PLUGINS_DIR
 
 

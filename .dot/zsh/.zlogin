@@ -9,3 +9,6 @@
 #                  __/ |
 #                 |___/
 #
+
+## Initialize compinit
+run-compinit

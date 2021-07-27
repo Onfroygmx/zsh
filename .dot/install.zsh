@@ -74,4 +74,7 @@ git clone https://github.com/zsh-users/zsh-history-substring-search.git $PLUGINS
 printf "\n$fg[green]Clone: zsh-users/zsh-syntax-highlighting$reset_color\n"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $PLUGINS_DIR/syntax-highlighting
 
+printf "\n$fg[green]Clone: zdharma/fast-syntax-highlighting$reset_color\n"
+git clone https://github.com/zdharma/fast-syntax-highlighting.git $PLUGINS_DIR/fast-syntax-highlighting
+
 printf "\n$fg[yellow]Install fininshed, restart ZSH$reset_color\n"

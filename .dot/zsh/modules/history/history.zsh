@@ -28,22 +28,9 @@ setopt hist_verify             # don't execute immediately upon history expansio
 setopt inc_append_history      # write to the history file immediately, not when the shell exits
 setopt no_share_history        # don't share history between all sessions
 
-
-# $HISTFILE belongs in the data home, not with the configs
 HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh/history"
-if [[ ! -f "$HISTFILE" ]]; then
-  mkdir -pv "$HISTFILE:h" && touch "$HISTFILE"
-fi
-
-export LESSHISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/less/history"
-if [[ ! -f "$LESSHISTFILE" ]]; then
-  mkdir -pv "$LESSHISTFILE:h" && touch "$LESSHISTFILE"
-fi
-
-export MYSQL_HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/mysql/history"
-if [[ ! -f "$MYSQL_HISTFILE" ]]; then
-  mkdir -pv "$MYSQL_HISTFILE:h" && touch "$MYSQL_HISTFILE"
-fi
+LESSHISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/less/history"
+MYSQL_HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/mysql/history"
 
 # you can set $SAVEHIST and $HISTSIZE to anything greater than the ZSH defaults
 # (1000 and 2000 respectively), but if not we make them way bigger.

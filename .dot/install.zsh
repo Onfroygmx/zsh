@@ -17,6 +17,7 @@ autoload -U colors && colors
 ## Export work folders
 #################################################
 export XDG_CONFIG_HOME=$HOME/.dot
+export XDG_DATA_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"/data
 
 export ZDOTDIR=${XDG_CONFIG_HOME:-$HOME/.config}/zsh
 
@@ -28,12 +29,36 @@ printf "\n$fg[green]Symlink zshenv file$reset_color\n"
 ## Set zshenv file
 [[ ! -f $HOME/.zshenv && -f $ZDOTDIR/zshenv ]] && ln -s $ZDOTDIR/zshenv $HOME/.zshenv
 
+printf "\n$fg[green]Create other folders$reset_color\n"
+# Create plugins dir
 PLUGINS_DIR="$XDG_CONFIG_HOME/Plugins"
-
 [[ ! -d "$PLUGINS_DIR" ]] && mkdir -p $PLUGINS_DIR
 
-source $ZDOTDIR/modules/history/history.zsh
 
+if [[ ! -d "$XDG_DATA_HOME" ]]; then
+    # $HISTFILE belongs in the data home, not with the configs
+    HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh/history"
+    if [[ ! -f "$HISTFILE" ]]; then
+      mkdir -pv "$HISTFILE:h" && touch "$HISTFILE"
+    fi
+
+    LESSHISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/less/history"
+    if [[ ! -f "$LESSHISTFILE" ]]; then
+      mkdir -pv "$LESSHISTFILE:h" && touch "$LESSHISTFILE"
+    fi
+
+    MYSQL_HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/mysql/history"
+    if [[ ! -f "$MYSQL_HISTFILE" ]]; then
+      mkdir -pv "$MYSQL_HISTFILE:h" && touch "$MYSQL_HISTFILE"
+    fi
+
+    NANO_HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/nano/search_history"
+    if [[ ! -f "$NANO_HISTFILE" ]]; then
+      mkdir -pv "$NANO_HISTFILE:h" && touch "$NANO_HISTFILE"
+    fi
+fi
+
+printf "\n$fg[green]Set permission 700 to all created folders$reset_color\n"
 find $XDG_CONFIG_HOME -type d -print0 | xargs -0 chmod 700
 mv .dotgit $XDG_CONFIG_HOME
 

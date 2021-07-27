@@ -8,6 +8,15 @@
 #  \_____/___/_| |_|_|  \___|
 #
 
+## Set prompt
+
+# enable substitution for prompt
+setopt prompt_subst
+
+# Verry simple prompt
+PROMPT='%F{green}%n%f %F{cyan}%(4~|%-1~/.../%2~|%~)%f %F{magenta}%B>%b%f '
+RPROMPT='%(?.%F{green}.%F{red}[%?] - )%B%D{%H:%M:%S}%b%f'
+
 ## Source Modules and plugins
 # Load personal Modules
 source $MODULE_DIR/aliases/aliases.zsh

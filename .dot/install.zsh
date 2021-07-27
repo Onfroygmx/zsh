@@ -32,6 +32,8 @@ PLUGINS_DIR="$XDG_CONFIG_HOME/Plugins"
 
 [[ ! -d "$PLUGINS_DIR" ]] && mkdir -p $PLUGINS_DIR
 
+source $ZDOTDIR/modules/history/history.zsh
+
 find $XDG_CONFIG_HOME -type d -print0 | xargs -0 chmod 700
 mv .dotgit $XDG_CONFIG_HOME
 

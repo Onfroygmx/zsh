@@ -16,14 +16,14 @@ alias la='ll -avh'
 alias cp='cp -iv'       # Confirm before overwriting something
 alias mv='mv -iv'       # Confirm before overwriting something
 alias rm='rm -iv'       # Confirm before deleting anything
-alias pcp='rsync -r --progress' # Copy with progress bar and speed
-alias pch='rsync -ah --progress source destination'
+alias pcp='rsync -r --progress'     # Copy with progress bar and speed
+alias pch='rsync -ah --progress'    # Copy with progress bar and speed
 
 # Lists the ten most used commands.
 alias history-stat="history 0 | awk '{print \$2}' | sort | uniq -c | sort -n -r | head"
 alias history-statc="fc -l 1 | awk '{ CMD[$2]++; count++; } END { for (a in CMD) print CMD[a] " " CMD[a]*100/count "% " a }' | grep -v "./" | sort -nr | head -20 | column -c3 -s " " -t | nl"
 
-# Home bare repository
+# Home bare repository for git/tree operations
 alias dot='git --git-dir=$XDG_CONFIG_HOME/.dotgit/ --work-tree=$HOME'
 alias treedot='tree -ahC -L 4 --dirsfirst -I .dotgit'
 alias treedotclean='treedot -I completions\|.dotgit\|zinit'

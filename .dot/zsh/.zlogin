@@ -42,7 +42,3 @@ fi
 if [[ ! -f "$MYSQL_HISTFILE" ]]; then
   mkdir -pv "$MYSQL_HISTFILE:h" && touch "$MYSQL_HISTFILE"
 fi
-
-if [[ ! -f "$NANO_HISTFILE" ]]; then
-  mkdir -pv "$NANO_HISTFILE:h" && touch "$NANO_HISTFILE"
-fi

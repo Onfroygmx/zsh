@@ -23,7 +23,7 @@ for file in $MODULE_DIR/**/*.zsh; source $file
 
 # Load external Plugins
 source $PLUGIN_DIR/autosuggestions/zsh-autosuggestions.zsh
-source $PLUGIN_DIR/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source $PLUGIN_DIR/syntax-highlighting/zsh-syntax-highlighting.zsh
 # If loaded before highlighting takes 10-20 ms
 source $PLUGIN_DIR/history-substring-search/zsh-history-substring-search.zsh
 

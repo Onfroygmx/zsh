@@ -21,7 +21,7 @@ alias pch='rsync -ah --progress'    # Copy with progress bar and speed
 
 # Lists the ten most used commands.
 alias history-stat="history 0 | awk '{print \$2}' | sort | uniq -c | sort -n -r | head"
-alias history-statc="fc -l 1 | awk '{ CMD[$2]++; count++; } END { for (a in CMD) print CMD[a] " " CMD[a]*100/count "% " a }' | grep -v "./" | sort -nr | head -20 | column -c3 -s " " -t | nl"
+#alias history-statc="fc -l 1 | awk '{ CMD[$2]++; count++; } END { for (a in CMD) print CMD[a] " " CMD[a]*100/count "% " a }' | grep -v "./" | sort -nr | head -20 | column -c3 -s " " -t | nl"
 
 # Home bare repository for git/tree operations
 alias dot='git --git-dir=$XDG_CONFIG_HOME/.dotgit/ --work-tree=$HOME'

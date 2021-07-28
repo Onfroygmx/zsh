@@ -19,8 +19,13 @@ source $PLUGIN_DIR/history-substring-search/zsh-history-substring-search.zsh
 # Set highlighters
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
-# Set color of autosuggestions
+ZSH_HIGHLIGHT_PATTERNS+=('brew install *' 'fg=white,bold,bg=green')
+# Set color of autosuggestions and ignore leading spaces
+ZSH_AUTOSUGGEST_COMPLETION_IGNORE="[[:space:]]*"   # Ignore leading whitespace
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=69'
+# Set history search options
+HISTORY_SUBSTRING_SEARCH_FUZZY=set
+HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=set
 
 # Bind ^[[A/^[[B for history search after sourcing the file
 bindkey '^[[A' history-substring-search-up

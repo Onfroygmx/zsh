@@ -41,7 +41,6 @@ mv .dotgit $XDG_CONFIG_HOME
 
 printf "\n$fg[Cyan]Clone external Plugins$reset_color\n"
 
-
 printf "\n$fg[green]Clone: zsh-users/zsh-autosuggestions$reset_color\n"
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $PLUGINS_DIR/autosuggestions
 printf "\n$fg[green]Clone: zsh-users/zsh-completions$reset_color\n"
@@ -50,8 +49,5 @@ printf "\n$fg[green]Clone: zsh-users/zsh-history-substring-search$reset_color\n"
 git clone https://github.com/zsh-users/zsh-history-substring-search.git $PLUGINS_DIR/history-substring-search
 printf "\n$fg[green]Clone: zsh-users/zsh-syntax-highlighting$reset_color\n"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $PLUGINS_DIR/syntax-highlighting
-
-printf "\n$fg[green]Clone: zdharma/fast-syntax-highlighting$reset_color\n"
-git clone https://github.com/zdharma/fast-syntax-highlighting.git $PLUGINS_DIR/fast-syntax-highlighting
 
 printf "\n$fg[yellow]Install fininshed, restart ZSH$reset_color\n"

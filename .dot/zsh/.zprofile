@@ -36,11 +36,13 @@ manpath=(
   $manpath
 )
 
+# Add completion add the begining of fpath and custom functions at the end
+fpath=( "$PLUGIN_DIR/completions/src" "${fpath[@]}" "$ZDOTDIR/functions" )
+
 # Ensure path arrays do not contain duplicates.
 typeset -gU path manpath fpath
 
-# Add completion add the begining of fpath and custom functions at the end
-fpath=( "$PLUGIN_DIR/completions/src" "${fpath[@]}" "$ZDOTDIR/functions" )
+# Autoload functions from zsh base
 autoload -Uz $fpath[-1]/*(.:t)
 
 ################################
@@ -56,8 +58,8 @@ if [[ "$OSTYPE" == darwin* ]]; then
     (( ${+LANG} )) || export LANG='en_US.UTF-8'
 
     path=(
-      /usr/local/opt/coreutils/libexec/gnubin
-      /usr/local/opt/gnu-time/libexec/gnubin
+      /usr/local/opt/coreutils/libexec/gnubin   # Gnu Core utils
+      /usr/local/opt/gnu-time/libexec/gnubin    # Gnu-time
       $path
     )
 else

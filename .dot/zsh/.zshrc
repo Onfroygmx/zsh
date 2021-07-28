@@ -7,7 +7,8 @@
 #  ./ /__\__ \ | | | | | (__
 #  \_____/___/_| |_|_|  \___|
 #
-unsetopt beep
+# Disable all beeps
+setopt no_beep
 
 ## Set prompt
 # enable substitution for prompt

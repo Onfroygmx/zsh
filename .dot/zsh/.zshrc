@@ -7,9 +7,9 @@
 #  ./ /__\__ \ | | | | | (__
 #  \_____/___/_| |_|_|  \___|
 #
+unsetopt beep
 
 ## Set prompt
-
 # enable substitution for prompt
 setopt prompt_subst
 

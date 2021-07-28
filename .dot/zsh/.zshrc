@@ -23,5 +23,13 @@ for file in $MODULE_DIR/**/*.zsh; source $file
 
 # Load external Plugins
 source $PLUGIN_DIR/autosuggestions/zsh-autosuggestions.zsh
+source $PLUGIN_DIR/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+# If loaded before highlighting takes 10-20 ms
+source $PLUGIN_DIR/history-substring-search/zsh-history-substring-search.zsh
+
 # Specify settings for plugins
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=69'
+
+# Bind ^[[A/^[[B for history search after sourcing the file
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down

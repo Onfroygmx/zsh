@@ -1,0 +1,25 @@
+# System
+Desktop
+Documents
+Downloads
+Library
+Movies
+Music
+Pictures
+Public
+Torrents
+
+# Files
+*.zwc
+.DS_Store
+.CFUserTextEncoding
+.zshenv
+.dot/zsh/modules/dircolor/ls_colors.zsh
+
+# Folders
+.atom
+.cache
+.dot/.dotgit
+.dot/data
+.dot/plugins
+.vscode

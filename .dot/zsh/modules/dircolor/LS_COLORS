@@ -1,4 +1,4 @@
-# Configuration file for dircolors, a utility to help you set the
+### Configuration file for dircolors, a utility to help you set the
 # LS_COLORS environment variable used by GNU ls with the --color option.
 # Copyright (C) 1996-2020 Free Software Foundation, Inc.
 # Copying and distribution of this file, with or without modification,
@@ -108,3 +108,11 @@ STICKY_OTHER_WRITABLE 35             # Magenta: Dir that is sticky and other-wri
 .cfg                   38
 .conf                  04;33
 .gitignore             33
+
+# state dumps
+.aria2                38;5;241
+.dump                 38;5;241
+.stackdump            38;5;241
+.zcompdump            38;5;241
+.zwc                  38;5;241
+

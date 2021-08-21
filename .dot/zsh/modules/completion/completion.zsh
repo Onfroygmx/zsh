@@ -1,7 +1,15 @@
 #!/bin/zsh
+0="${${ZERO:-${0:#$ZSH_ARGZERO}}:-${(%):-%N}}"
+0="${${(M)0:#/*}:-$PWD/$0}"
 
-fpath+=(${0:a:h}/functions)
-autoload -Uz $fpath[-1]/*(.:t)
+if [[ $PMSPEC != *f* ]] {
+    fpath+=( "${0:h}/functions" )
+}
+
+autoload -Uz run-compinit
+
+#fpath+=(${0:a:h}/functions)
+#autoload -Uz $fpath[-1]/*(.:t)
 
 setopt complete_in_word    # Complete from both ends of a word.
 setopt always_to_end       # Move cursor to the end of a completed word.

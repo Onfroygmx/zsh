@@ -24,3 +24,6 @@ VirtualBox\ VMs
 .dot/data
 .dot/plugins
 .vscode
+
+# Files
+.dot/zsh/.passwd

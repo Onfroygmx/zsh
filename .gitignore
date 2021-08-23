@@ -23,6 +23,7 @@ VirtualBox\ VMs
 .dot/.dotgit
 .dot/data
 .dot/plugins
+.ssh
 .vscode
 
 # Files

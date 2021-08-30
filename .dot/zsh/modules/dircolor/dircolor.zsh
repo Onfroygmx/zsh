@@ -10,6 +10,7 @@ local currentdir=${${(%):-%x}:a:h}
 #fi
 
 if [[ ! -f $ZSH_CACHE_DIR/ls_colors.zsh || $currentdir/LS_COLORS -nt $ZSH_CACHE_DIR/ls_colors.zsh ]]; then
+    [[ ! -d "$ZSH_CACHE_DIR" ]] && mkdir -p $ZSH_CACHE_DIR
     dircolors -b $currentdir/LS_COLORS > $ZSH_CACHE_DIR/ls_colors.zsh
     zcompile $ZSH_CACHE_DIR/ls_colors.zsh
 fi

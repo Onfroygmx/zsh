@@ -14,13 +14,13 @@
 ################################
 # Set PAHTHS #
 ################################
-export MODULE_DIR=$ZDOTDIR/modules
-export PLUGIN_DIR=$XDG_CONFIG_HOME/plugins
-
-export ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}"/zsh
-
 # Set specific XDG variables
 export XDG_DATA_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"/data
+
+# Set specific path variables
+export MODULE_DIR=$ZDOTDIR/modules
+export PLUGIN_DIR=$XDG_CONFIG_HOME/plugins
+export ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}"/zsh
 
 # Set standard paths
 path=(

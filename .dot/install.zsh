@@ -20,6 +20,7 @@ export XDG_CONFIG_HOME=$HOME/.dot
 export XDG_DATA_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"/data
 
 export ZDOTDIR=${XDG_CONFIG_HOME:-$HOME/.config}/zsh
+export ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}"/zsh
 
 printf "\n$fg[green]Clone: Onfroygmx/zsh$reset_color\n"
 git clone --bare https://github.com/Onfroygmx/zsh.git $HOME/.dotgit

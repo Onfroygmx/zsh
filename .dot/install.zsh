@@ -53,6 +53,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $PLUGINS_DIR/
 
 printf "\n$fg[yellow]Install fininshed, restart ZSH$reset_color\n"
 
-ln -s $XDG_CONFIG_HOME/data/atom .atom                                                                                                                                                                                                                                     17:25:49
+ln -s $XDG_CONFIG_HOME/data/atom .atom
 ln -s $XDG_CONFIG_HOME/data/vscode .vscode
 ln -s $XDG_CONFIG_HOME/data/nano $XDG_CONFIG_HOME/

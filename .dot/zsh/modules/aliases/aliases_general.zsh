@@ -26,4 +26,4 @@ alias history-stat="history 0 | awk '{print \$2}' | sort | uniq -c | sort -n -r 
 # Home bare repository for git/tree operations
 alias dot='git --git-dir=$XDG_CONFIG_HOME/.dotgit/ --work-tree=$HOME'
 alias treedot='tree -ahC -L 4 --dirsfirst -I .dotgit'
-alias treedotclean='treedot -I completions\|.dotgit\|zinit'
+alias treedotclean='treedot -I completions\|.dotgit\|zpmod'

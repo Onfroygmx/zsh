@@ -51,3 +51,7 @@ printf "\n$fg[green]Clone: zsh-users/zsh-syntax-highlighting$reset_color\n"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $PLUGINS_DIR/syntax-highlighting
 
 printf "\n$fg[yellow]Install fininshed, restart ZSH$reset_color\n"
+
+ln -s $XDG_CONFIG_HOME/data/atom .atom                                                                                                                                                                                                                                     17:25:49
+ln -s $XDG_CONFIG_HOME/data/vscode .vscode
+ln -s $XDG_CONFIG_HOME/data/nano $XDG_CONFIG_HOME/

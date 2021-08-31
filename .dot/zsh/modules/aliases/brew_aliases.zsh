@@ -1,6 +1,9 @@
 #!/usr/bin/env zsh
 #!/bin/zsh
 
+# Brew leaves dependency tree
+alias brewlist="brew leaves | xargs brew deps --include-build --tree"
+
 ## Update and upgrade commands for Brew
 alias bubo='brew update && brew outdated'
 alias bubc='brew upgrade && brew cleanup'

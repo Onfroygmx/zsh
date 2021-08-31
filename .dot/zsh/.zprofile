@@ -38,14 +38,11 @@ manpath=(
   $manpath
 )
 
-# Add completion add the begining of fpath and custom functions at the end
-fpath=( "$PLUGIN_DIR/completions/src" "${fpath[@]}" "$ZDOTDIR/functions" )
-
+# Add completion add the begining of fpath
+#fpath=( "$PLUGIN_DIR/completions/src" "${fpath[@]}" "$ZDOTDIR/functions" )
+fpath=( "$PLUGIN_DIR/completions/src" "${fpath[@]}" )
 # Ensure path arrays do not contain duplicates.
 typeset -gU path manpath fpath
-
-# Autoload functions from zsh base
-autoload -Uz $fpath[-1]/*(.:t)
 
 ################################
 # EXPORT OS SPECIFIC VARIABLES #
